@@ -14,6 +14,22 @@ def onvioAutomation(p: Playwright):
     page.click('#mfa-reminder-close')
     page.click('#bm-header-app-menu-toggle')
 
-    page.hover ('#client-combobox-5-input-5-input-5-input-5-input-5-input-5-input-5-input-5-input-5-input')
+    
+    #inserção dos dados para solicitação
 
-   
+    page.click ('#client-combobox-5-input-5-input-5-input-5-input-5-input-5-input-5-input-5-input-5-input')
+    page.fill ('#client-combobox-5-input-5-input-5-input-5-input-5-input-5-input-5-input-5-input-5-input', '1428')
+    page.click ('//div[contains(text(), "MORETO CONTABILIDADE S/S LTDA")]')
+    page.click('#requester')
+    page.click('#bui-combobox-list-3-grid-cell-0x0')
+    page.click('//label[contains(text(), "OUTRO")]')
+    page.click('#department')
+    page.click('//div[contains(text(), "Departamento do Sistema")]')
+    page.fill('#subject', "Assunto teste")
+    page.fill('#description', "Lorem Ipsum")
+    page.fill('#due-date', "15032024")
+
+    
+    with sync_playwright as p:
+        onvioAutomation(p)
+    
