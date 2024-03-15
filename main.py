@@ -30,11 +30,7 @@ def onvioAutomation(p: Playwright):
     page.click('//div[contains(text(), "Departamento do Sistema")]')
     page.fill('#subject', "Assunto teste")
     page.fill('#description', "Lorem Ipsum")
-    page.fill('#due-date', "15032024")
-    page.click('//span[contains(text(), "LOCALIZE UM ARQUIVO")]')
-    page.click('//span[contains(text(), "LOCALIZE UM ARQUIVO")]')
-    sleep(15)
-    page.click("#service-requesting-generic-add")
+    page.click('//button[contains(text(),"ADICIONAR")]')
 
     
 with sync_playwright() as p:
