@@ -16,25 +16,25 @@ def onvioAutomation(p: Playwright):
     page.click('#bm-header-app-menu-toggle')
 
     #inserção dos dados para solicitação
+    page.goto("https://onvio.com.br/br-portal-do-cliente/service-requesting/general")
 
-    with page.expect_popup() as pi:
-        page.goto("https://onvio.com.br/br-portal-do-cliente/service-requesting/general")
-    popup = (pi.value)
-
-    sleep (50)
-
-
-    page.locator('text=Adicionar').click()
-    popup.fill('#client-combobox-5-input-5-input-5-input-5-input-5-input-5-input-5-input-5-input-5-input', '1428')
-    popup.click('//div[contains(text(), "MORETO CONTABILIDADE S/S LTDA")]')
-    popup.click('#requester')
-    popup.click('#bui-combobox-list-3-grid-cell-0x0')
-    popup.click('//label[contains(text(), "OUTRO")]')
-    popup.click('#department')
-    popup.click('//div[contains(text(), "Departamento do Sistema")]')
-    popup.fill('#subject', "Assunto teste")
-    popup.fill('#description', "Lorem Ipsum")
-    popup.fill('#due-date', "15032024")
+    page.click('//span[contains(text(), "Adicionar")]')
+    sleep (5.5)
+   
+    page.fill('//*[@id="client-combobox-1-input-1-input"]',"1428")
+    page.click('//div[contains(text(), "MORETO CONTABILIDADE S/S LTDA")]')
+    page.click('#requester')
+    page.click('//div[contains(text(), "Romulo Rodrigues")]')
+    page.click('//label[contains(text(), "OUTRO")]')
+    page.click('#department')
+    page.click('//div[contains(text(), "Departamento do Sistema")]')
+    page.fill('#subject', "Assunto teste")
+    page.fill('#description', "Lorem Ipsum")
+    page.fill('#due-date', "15032024")
+    page.click('//span[contains(text(), "LOCALIZE UM ARQUIVO")]')
+    page.click('//span[contains(text(), "LOCALIZE UM ARQUIVO")]')
+    sleep(15)
+    page.click("#service-requesting-generic-add")
 
     
 with sync_playwright() as p:
