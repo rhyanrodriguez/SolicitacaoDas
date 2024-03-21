@@ -1,3 +1,3 @@
 # SolicitacaoDas
 
-Esse robô acessa o Portal de Clientes do Onvio e faz uma solicitação de DAS utilizando dados que estão no banco MySQL.
+Esse robô foi projetado para integração com a plataforma Onvio, com foco específico na seção "Portal de Clientes". O robô é programado para submeter automaticamente solicitações de DAS (Documento de Arrecadação Simplificado) para empresas listadas em um banco de dados MySQL. Além da solicitação do DAS, ele fornece informações detalhadas sobre os valores a serem pagos e a porcentagem da alíquota do ISS (Imposto Sobre Serviços). Após a conclusão dessas tarefas, o robô encaminha automaticamente essas informações diretamente ao solicitante, ou seja, ao Cliente. Este processo visa simplificar e automatizar os procedimentos de obtenção de documentos fiscais e notificação, garantindo uma comunicação eficiente e oportuna entre o prestador de serviço e o cliente.
